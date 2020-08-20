@@ -1,3 +1,7 @@
+:root{
+  --duration-beat: 1.5s;
+}
+
 body{
   margin: 0 auto;
   min-height: 100vh;
@@ -51,7 +55,7 @@ footer{
   overflow: scroll;
 
   animation-name: back;
-  animation-duration: 1.5s;
+  animation-duration: var(--duration-beat);
   animation-iteration-count: infinite;
 }
 
@@ -70,7 +74,7 @@ footer{
   transform: rotate(-45deg);
 
   animation-name: beat;
-  animation-duration: 1.5s;
+  animation-duration: var(--duration-beat);
   animation-iteration-count: infinite;
 
 }
