@@ -49,6 +49,10 @@ footer{
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
   overflow: scroll;
+
+  animation-name: back;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
 
 
@@ -62,4 +66,53 @@ footer{
   background-color: pink;
   height: 50px;
   width: 50px;
+  
+  transform: rotate(-45deg);
+
+  animation-name: beat;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+
+}
+
+
+.heart::before{
+  position: absolute;
+  top: -25px;
+  left: 0;
+  content: "";
+  background-color: pink;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.heart::after{
+  position: absolute;
+  content: "";
+  background-color: pink;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+@keyframes beat{
+
+  0%{
+    transform: scale(1) rotate(-45deg);
+  }
+
+  50%{
+    transform: scale(1.5) rotate(-45deg);
+  }
+
+}
+
+
+@keyframes back{
+
+  50%{
+    background-color: #ffe6f2
+  }
+
 }
